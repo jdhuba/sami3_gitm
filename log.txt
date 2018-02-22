@@ -1,0 +1,118 @@
+commit 042de4b10abe936d7decdd98741facc813939129
+Author: huba <huba@nrl.navy.mil>
+Date:   Sun Feb 18 10:05:20 2018 -0500
+
+      exb_transport.f90
+    
+      - used extrapolation to define deni/ti/te for
+        k = 1 in fluxh
+
+commit 4943af981fe14dc0825bdcee50355e19886b280f
+Author: huba <huba@nrl.navy.mil>
+Date:   Fri Feb 16 09:01:02 2018 -0500
+
+      used extrapolation for fluxnh in exb_transport for k = 1
+
+commit 04557c54b2dce70083e7a62e02c66d517c92bbbd
+Author: huba <huba@nrl.navy.mil>
+Date:   Mon Feb 12 09:53:00 2018 -0500
+
+      added variable u5
+
+commit bd10c057faea3968eb4979acf9d8568cb7c30377
+Author: huba <huba@nrl.navy.mil>
+Date:   Fri Feb 9 15:05:34 2018 -0500
+
+      changed 2,nl1 --> 1,nl in main loop and initialization
+
+commit 0ced29561b04a07cc57202541036fc2cb2779c41
+Merge: 34bf14f 481ac4d
+Author: huba <huba@nrl.navy.mil>
+Date:   Wed Feb 7 15:26:27 2018 -0500
+
+    Merge branch 'mod'
+    
+      sami3-3.00.f90:
+    
+      1. 7 --> nneut
+    
+      2. enhanced NO+ and H+ loss rate below 90 km
+
+commit 481ac4dd4916bdfe15c7028d4e7c11c5c74af676
+Author: huba <huba@nrl.navy.mil>
+Date:   Wed Feb 7 15:17:32 2018 -0500
+
+     sami3-3.00.f90:
+    
+     1. 7 --> nneut
+    
+     2. enhanced NO+ and H+ loss below 90 km
+
+commit 34bf14fd66b1438e42d9b6e49277b32c9a6f9193
+Author: huba <huba@nrl.navy.mil>
+Date:   Wed Feb 7 12:25:13 2018 -0500
+
+     exb_transport.f90: 1,nl --> 2,nlm1
+    
+     misc_mod.f90: real*8 --> real
+    
+     nrlmsise00: svv(1) --> svv(25)
+    
+     photo_production_mod.f90: 7 --> nneut
+
+commit 31d90defb5885bdf1bbfab961c1242580fb23d7f
+Author: huba <huba@nrl.navy.mil>
+Date:   Wed Feb 7 12:05:07 2018 -0500
+
+     exb_transport.f90:   1,nl --> 2,nlm1 flux update
+    
+     misc_mod.f90: blon0pt*8 --> blon0pt
+    
+     nrlmsise00.f: svv(1) --> svv(25)
+    
+     photo_production_mod.f90: 7 --> nneut
+
+commit 846d0ee9465441ead44883e735a9787385d67cf5
+Merge: 641de34 d90a54f
+Author: huba <huba@nrl.navy.mil>
+Date:   Wed Feb 7 09:25:33 2018 -0500
+
+    Merge branch 'master' of https://github.com/jdhuba/sami3_basic
+    
+     - trying to coordinate local/remote repository
+
+commit 641de34b3fd348f9dea1a2a4aec86aa12b6b7ca6
+Author: huba <huba@nrl.navy.mil>
+Date:   Wed Feb 7 09:00:04 2018 -0500
+
+      testing commit
+    
+      - changed code for nl = 180
+      - and blat_max4 = 89
+
+commit d90a54f2e0bbd8eefa75416a0e3ecf2de270fcba
+Merge: 94afeb9 7b2ecdd
+Author: jdhuba <36104093+jdhuba@users.noreply.github.com>
+Date:   Wed Feb 7 08:40:04 2018 -0500
+
+    Merge pull request #1 from jdhuba/test_1
+    
+    Update README.md
+
+commit 7b2ecdd52367825cad0cb75a721cda67bbd3ccbc
+Author: jdhuba <36104093+jdhuba@users.noreply.github.com>
+Date:   Wed Feb 7 08:34:03 2018 -0500
+
+    Update README.md
+
+commit 94afeb99ed5a4903b693544d97f4162875b14fdf
+Author: jdhuba <36104093+jdhuba@users.noreply.github.com>
+Date:   Wed Feb 7 08:27:33 2018 -0500
+
+    Initial commit
+
+commit 6b30ac2622e872b7856acf64a5e954529fb3297c
+Author: huba <huba@nrl.navy.mil>
+Date:   Tue Feb 6 14:09:11 2018 -0500
+
+    first commit

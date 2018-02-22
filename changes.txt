@@ -1,0 +1,39 @@
+
+changes from the last set of changes.
+
+1.  near the end of the 'update' subroutine remove or 
+    comment out these lines.
+
+    hipcp(nfl,nll)   = hipcp(nfl,nll)   * ps(nz/2,nfl,nll)
+    hipcphi(nfl,nll) = hipcphi(nfl,nll) / ps(nz/2,nfl,nll)
+
+2.  in the 'potential' subroutine
+
+    a.  add definition of 'preal' in extra grid cells
+
+        do j = nyextra,1,-1
+            dpreal(j) = dpreal(j+1) * 1.4
+            preal(j)  = preal(j+1) - dpreal(j)
+        enddo
+
+    b.  comment out old pcphimx,pcphipx,pcphimx,pcphipx
+        and replace with new ones
+
+!!$                pcphimx  = (0.5 * ( hipcphi_pot(im1,j) &
+!!$                + hipcphi_pot(i,j)   ))
+!!$                pcphipx  = (0.5 * ( hipcphi_pot(i,j) &
+!!$                + hipcphi_pot(ip1,j) ))
+!!$
+!!$                pcpmy  = (0.5 * ( hipcp_pot(i,jm1) + hipcp_pot(i,j)   ))
+!!$                pcppy  = (0.5 * ( hipcp_pot(i,j)   + hipcp_pot(i,jp1) ))
+
+          pcphimx  = (0.5 * ( hipcphi_pot(im1,j) &
+                     + hipcphi_pot(i,j)   )) / preal(j)
+          pcphipx  = (0.5 * ( hipcphi_pot(i,j)   &
+                     + hipcphi_pot(ip1,j) )) / preal(j)
+
+          pcpmy  = 0.5 * ( hipcp_pot(i,jm1) * preal(jm1) + &
+                           hipcp_pot(i,j)   * preal(j)   ) 
+          pcppy  = 0.5 * ( hipcp_pot(i,j)   * preal(j)   + &
+                           hipcp_pot(i,jp1) * preal(jp1) ) 
+

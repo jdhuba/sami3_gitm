@@ -1,0 +1,54 @@
+
+ &go 
+  maxstep  =   10,
+  hrmax    =   24.,
+  dthr     =   .25e-5,
+  hrpr     =   0., 
+  dt0      =   4.,
+  rmin     =  90., 
+  altmin   =  85.,
+  fbar     =  127.,
+  f10p7    =  110.,
+  ap       =    21,
+  year     = 2015,
+  day      =   77,
+  mmass    =   48 ,
+  nion1    =    1,
+  nion2    =    7,
+  hrinit   =    0.,
+  tvn0     =    1.,
+  tvexb0   =    1.,
+  ver      =    0.,
+  veh      =    0.,
+  vw       =    0.
+  gamss    =    .1,
+  alt_crit_avg = 6370.
+  blat_max4 = 88.,
+  blat_min  = 6.85,
+  snn      =    1.,1.,1.,1.,1.,1.,1.,
+  stn      =    1.,
+  denmin   =    1.e-6,
+  alt_crit =  150.,
+  cqe      =  6.e-14,
+!  plat     = 1.375, ! tilted
+!  plon     = 5.079, ! tilted
+!  plat     = 1.431, ! tilted
+!  plon     = 4.294, ! tilted
+  plat     = 1.57,  ! not tilted
+  plon     = 6.28,  ! not tilted
+  psmooth  = 0,  ! smoother for p grid
+  hall     = .true.,
+  restart  = .false.,
+  storm_ti = 52.,
+  storm_tf = 60.,
+  vexb_max = 4e6,
+  lmadala  = .true.,
+  lcr      = .false.,
+  lvs      = .false.,
+  lweimer  = .false.,   ! set lvs = .false. if .true
+  decay_time = 6.,
+  pcrit      = 8.,
+  lhwm93     = .false.,
+  lhwm14     = .true., 
+  anu_drag0  = 4.e3,
+&end
