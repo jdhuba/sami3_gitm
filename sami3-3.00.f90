@@ -1064,7 +1064,8 @@
             dts    = min(dt,mod(time,dthr*3600.))
             dt_old = dt
             if ( dts < dt .AND. .not. lprnt ) then
-                dt     = max(dts,.01)
+!                dt     = max(dts,.01) ! can lead to outputting 2 times in a row
+                dt     = max(dts,.1)
                 lprnt  = .TRUE. 
             endif
 
