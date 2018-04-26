@@ -297,6 +297,7 @@
     use parameter_mod
     use variable_mod
     use time_mod
+    use misc_mod
 
     tfactor  = ( hrut - hruti ) / ( hrutf - hruti )
     tfactor1 = 1. - tfactor
@@ -323,6 +324,10 @@
                             + vf(i,j,n)  * tfactor
                 w(i,j,n)  =   wi(i,j,n)  * tfactor1 &
                             + wf(i,j,n)  * tfactor
+
+                u1(i,j,n) = u(i,j,n)
+                u2(i,j,n) = v(i,j,n)
+
             enddo
         enddo
     enddo

@@ -1,4 +1,4 @@
-OBJ= parameter_mod.o namelist_mod.o variable_mod.o message_passing_mod.o chemistry_mod.o time_mod.o photo_production_mod.o atomic_mod.o conductance_mod.o exb_mod.o misc_mod.o grid_mod.o gitm_mod.o apexcord.o chapman.o grid3-3.00.o  hwm93.o madala_sevp_dp.o  nrlmsise00.o  sami3-3.00.o  sevp13_dp.o hwm14.o heating.o solvers.o photo_production.o output.o chemistry.o potential.o exb_transport.o misc.o neutral_gitm.o
+OBJ= parameter_mod.o namelist_mod.o variable_mod.o message_passing_mod.o chemistry_mod.o time_mod.o photo_production_mod.o atomic_mod.o conductance_mod.o exb_mod.o misc_mod.o grid_mod.o gitm_mod.o apexcord.o chapman.o grid3-3.00.o  hwm93.o madala_sevp_dp.o  nrlmsise00.o  sami3-3.00.o  sevp13_dp.o hwm14.o heating.o solvers.o photo_production.o output.o chemistry.o potential.o exb_transport.o misc.o neutral_gitm.o 
 
 # gfortran
 
@@ -7,8 +7,8 @@ OBJ= parameter_mod.o namelist_mod.o variable_mod.o message_passing_mod.o chemist
 
 # debug
 
-#f90 = /opt/openmpi-1.4.3_gfortran/bin/mpif90 -fno-automatic -g -fcheck=all -Wall
-#f77 = gfortran -fno-automatic -g -fcheck=all -Wall 
+#f90 = /opt/openmpi-1.4.3_gfortran/bin/mpif90 -fno-automatic -g -fcheck=all -Wall -mcmodel=large
+#f77 = gfortran -fno-automatic -g -fcheck=all -Wall -mcmodel=large
 
 
 # intel ifort
